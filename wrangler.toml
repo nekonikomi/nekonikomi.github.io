@@ -1,0 +1,12 @@
+name = "game-news-worker"
+main = "worker/news-worker.js"
+compatibility_date = "2025-06-01"
+
+[triggers]
+crons = ["*/15 * * * *"]
+
+# KV を使う場合は Cloudflare 側で namespace を作成し、id を設定してください。
+# KV 未設定でも /news へのアクセス時に RSS を取得して動作します。
+# [[kv_namespaces]]
+# binding = "NEWS_CACHE"
+# id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
